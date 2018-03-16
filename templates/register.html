@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TodoApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse" id="my-navbar">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <div class="pull-left">
+                            <ul class="nav navbar-nav nav-left">
+                                <li><a href="../index.html" style="font-size: 30px;">Home</a></li>
+                                <li><a href="login.html" id="loginView" style="font-size: 16px;">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="main_content">
+        <div class="container">
+            <form id="registrationForm" method="post" action="userProfile.html">
+                <div class="col-sm-6 col-sm-offset-3 form-bg">
+                    <h2 align="center">Registration</h2>
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter your firstname" value="" required>
+                        <span id="firstname_error" style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter your lastname" value="" required>
+                        <span id="lastname_error" style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter your email address" value="" required>
+                        <span id="incorrect_email" style="color:red"></span>
+                        </br>
+                        <span id="emailError" style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender"><b>Gender</b></label>
+                        <div id="group">
+                            <input type="radio" value="Male" name="gender"> Male
+                            <br>
+                            <input type="radio" value="Female" name="gender"> Female
+                            <br>
+                        </div>
+                        <div id="genderError" style="color: red;"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" value="" required>
+                        <!-- <span id="password_error" style="color:red"></span> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirm Password:</label>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm your password" value="" required>
+                        <span id="confirm_passworderror" style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea class="form-control" id="address" placeholder="Enter your address" value="" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile_image">Profile Pic:</label>
+                        <br>
+                        <input id="p_image" type="file" name="p_image" accept="image/x-png,image/gif,image/jpeg" onchange="registrationServices.setProfileImage(this);" required/>
+                        <span id="profile_imageError" style="color:red"></span>
+                        <img id="profile_img" alt="your profile image" hidden="hidden" />
+                    </div>
+                    <div class="clearfix">
+                        <button type="button" class="btn btn-warning">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            <form>
+        </div>
+    </div>
+    <script src="../js/register.js"></script>
+    <script src="../js/localStorage.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="linkEmail">Contact information: <a href="mailto:shruti.hiremath@cuelogic.com">shruti.hiremath@cuelogic.com</a></p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p class="linkEmail">© 2017. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

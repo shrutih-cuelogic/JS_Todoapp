@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TodoApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse" id="my-navbar">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <div class="pull-left">
+                            <ul class="nav navbar-nav nav-left">
+                                <li><a href="../index.html" style="font-size: 30px;">Home</a></li>
+                                <li><a href="register.html" style="font-size: 16px;" id="registerView">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="main_content">
+        <div class="container">
+            <div id="registerMenu">
+                <form id="loginForm" method="post" action="userProfile.html">
+                    <div class="col-sm-6 col-sm-offset-3 form-bg">
+                        <h2 align="center">Login</h2>
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" placeholder="Enter your email" class="form-control" id="login_email" value="" required>
+                            <span id="blankError" style="color:red"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" placeholder="Enter your password" id="login_password" value="" required>
+                            <span id="blankError" style="color:red"></span>
+                        </div>
+                        <div class="clearfix">
+                            <button type="button" class="btn btn-warning">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                        <br>
+                        <span id="loginError" style='color: red;'></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/localStorage.js"></script>
+    <script src="../js/login.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="linkEmail">Contact information: <a href="mailto:shruti.hiremath@cuelogic.com">shruti.hiremath@cuelogic.com</a></p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p class="linkEmail">© 2017. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

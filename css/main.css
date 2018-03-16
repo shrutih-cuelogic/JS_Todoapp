@@ -1,0 +1,28 @@
+.banner{
+  width: 100%;  
+  background-image: url("../images/main-background.jpg");
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 400px;
+}
+.banner .centered {
+    background-color: rgba(0,0,0,0.5);
+    padding: 40px;
+    margin: 50px auto;
+    margin-right: 30px;
+}
+header .navbar{
+  border-radius: 0;
+}
+.form-bg{
+  background-color: #ccc;
+  padding: 50px;
+}
+#main_content {
+  margin-top: 60px;
+}
+.navbar-nav .firstlastnameNav {
+  text-transform: capitalize;
+}
+/* super basic grid structure */
+

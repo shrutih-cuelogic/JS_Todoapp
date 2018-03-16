@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TodoApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse" id="my-navbar">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <div class="pull-left">
+                            <ul class="nav navbar-nav nav-left">
+                                <li><span class="navbar-brand" id="firstlastnameNav"></span></li>
+                                <li><a href="userProfile.html" style="font-size: 16px;" id="profileView">User Profile</a></li>
+                                <li><a href="todolist.html" style="font-size: 16px;" id="todoView">TodoList</a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="login.html" onclick="mainServices.logout();" style="font-size: 16px;" id="LogoutView">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="main_content">
+        <div class="container">
+            <h2 align="center">User Profile</h2>
+            <div class="user-profile-form col-sm-6 col-sm-offset-3 form-bg">
+                <div class="col-sm-6 col-md-4">
+                    <label for="profile_image">Profile Pic:</label><br>
+                    <img id="userProfile" src="#" alt="" class="img-rounded img-responsive" /><br>
+                    <input id="p_image" type="file" name="p_image" accept="image/x-png,image/gif,image/jpeg" onchange="userprofilePageServices.changeUserProfileImage(this);" required/>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-sm-6 col-md-10">
+                    <form>
+                        <div class="form-group">
+                            <label for="firstname"><b>First name</b></label>
+                            <input id="firstname" type="text" placeholder="Enter first name" name="firstname" onchange="userprofilePageServices.changeFName(this);" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname"><b>Last name</b></label>
+                            <input id="lastname" type="text" placeholder="Enter last name" name="lastname" onchange="userprofilePageServices.changeLName(this);" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="gender"><b>Gender</b></label>
+                            <div id="gender_group">
+                                <input type="radio" id="Male" value="Male" onclick='userprofilePageServices.changeGender(this)' name="gender"> Male
+                                <br>
+                                <input type="radio" id="Female" value="Female" onclick='userprofilePageServices.changeGender(this)' name="gender"> Female
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address"><b>Address</b></label>
+                            <textarea id="userAddress" name="userAddress" placeholder="Enter your address" rows="4" cols="50" onchange="userprofilePageServices.changeAddr(this);" class="form-control" required="required"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/localStorage.js"></script>
+    <script src="../js/userprofile.js"></script>
+    <script src="../js/main.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="linkEmail">Contact information: <a href="mailto:shruti.hiremath@cuelogic.com">shruti.hiremath@cuelogic.com</a></p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p class="linkEmail">© 2017. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
