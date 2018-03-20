@@ -9,283 +9,6 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--     <style type="text/css">
-        .container {
-          width: 600px;
-          margin: 0 auto;
-          background: #ffffff;
-          padding: 20px 0;
-          -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.2);
-          box-shadow: 0 0 2px rgba(0,0,0,0.2);
-        }
-
-        .row {
-          display: block;
-          padding: 10px;
-          text-align: center;
-          width: 100%;
-          clear: both;
-          overflow: hidden;
-        }
-
-        .half {
-          width: 50%;
-          float: left;
-        }
-
-        .content { background: #fff; }
-
-        /* logo */
-
-        h1 {
-          font-family: 'Rokkitt', sans-serif;
-          color: #666;
-          text-align: center;
-          font-weight: 400;
-          margin: 0;
-        }
-
-        .tagline {
-          margin-top: -10px;
-          text-align: center;
-          padding: 5px 20px;
-          font-size: 11px;
-          font-weight: 600;
-          text-transform: uppercase;
-          color: #777;
-        }
-
-        /* inputs */
-
-        .inputContainer {
-          height: 60px;
-          border-top: 1px solid #e5e5e5;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .inputContainer.last {
-          border-bottom: 1px solid #e5e5e5;
-          margin-bottom: 20px;
-        }
-
-        .inputContainer.half.last.right { border-left: 1px solid #efefef; }
-
-        input[type="date"],
-        input[type="text"],
-        select {
-          height: 100%;
-          width: 100%;
-          padding: 0 20px;
-          position: absolute;
-          top: 0;
-          vertical-align: middle;
-          display: inline-block;
-          border: none;
-          border-radius: none;
-          font-size: 13px;
-          color: #777;
-          margin: 0;
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 600;
-          letter-spacing: 0.5px;
-          -webkit-transition: background 0.3s;
-          transition: background 0.3s;
-        }
-
-        input[type="date"] { cursor: pointer; }
-
-        input[type="date"]:focus,
-        input[type="text"]:focus,
-        select:focus {
-          outline: none;
-          background: #ecf0f1;
-        }
-        input:-moz-placeholder {
-         color: lightgrey;
-         font-weight: normal;
-         transition: all 0.3s;
-        }
-        input:focus::-webkit-input-placeholder {
-         color: #95a5a6;
-         font-weight: bold;
-        }
-        input:focus::-moz-input-placeholder {
-         color: #95a5a6;
-         font-weight: bold;
-        }
-
-        label {
-          padding: 5px 20px;
-          font-size: 11px;
-          font-weight: 600;
-          text-transform: uppercase;
-          color: #777;
-          display: block;
-          position: absolute;
-        }
-
-        button {
-          font-family: 'Open Sans', sans-serif;
-          background: transparent;
-          border-radius: 2px;
-          border: none;
-          outline: none;
-          height: 50px;
-          width: 150px;
-          font-size: 1em;
-          color: #fff;
-          cursor: pointer;
-          text-transform: uppercase;
-          position: relative;
-          -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-        }
-
-        .icon {
-          position: absolute;
-          top: 30%;
-          left: 10px;
-          font-size: 20px;
-        }
-
-        .taskAdd {
-          background: #444;
-          padding-left: 15px;
-        }
-
-        .taskAdd:hover { background: #303030; }
-
-        .taskDelete {
-          background: #e74c3c;
-          padding-left: 30px;
-        }
-
-        .taskDelete:hover { background: #c0392b; }
-
-        /* task styles */
-
-        .taskList {
-          list-style: none;
-          padding: 0 20px;
-        }
-
-        .taskItem {
-          border-top: 1px solid #e5e5e5;
-          padding: 15px 0;
-          color: #777;
-          font-weight: 600;
-          font-size: 14px;
-          letter-spacing: 0.5px;
-        }
-
-        .taskList .taskItem:nth-child(even) { background: #fcfcfc; }
-
-        .taskCheckbox { margin-right: 1em; }
-
-        .complete-true {
-          text-decoration: line-through;
-          color: #bebebe;
-        }
-
-        .taskList .taskDate {
-          color: #95a5a6;
-          font-size: 10px;
-          font-weight: bold;
-          text-transform: uppercase;
-          display: block;
-          margin-left: 41px;
-        }
-
-        .fa-calendar {
-          margin-right: 10px;
-          font-size: 16px;
-        }
-         [class*='category-'] {
-         display: inline-block;
-         font-size: 10px;
-         background: #444;
-         vertical-align: middle;
-         color: #fff;
-         padding: 10px;
-         width: 75px;
-         text-align: center;
-         border-radius: 2px;
-         float: right;
-         font-weight: normal;
-         text-transform: uppercase;
-         margin-right: 20px;
-        }
-
-        .category- { background: transparent; }
-
-        .category-Personal { background: #2980b9; }
-
-        .category-Work { background: #8e44ad; }
-
-        .category-School { background: #f39c12; }
-
-        .category-Cleaning { background: #16a085; }
-
-        .category-Other { background: #d35400; }
-
-        .taskCheckbox {
-          -webkit-appearance: none;
-          appearance: none;
-          -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-          display: inline-block;
-          cursor: pointer;
-          width: 19px;
-          height: 19px;
-          vertical-align: middle;
-        }
-
-        .taskCheckbox:focus { outline: none; }
-
-        .taskCheckbox:before,
-        .taskCheckbox:checked:before {
-          font-family: 'FontAwesome';
-          color: #444;
-          font-size: 20px;
-          -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-        }
-
-        .taskCheckbox:before { content: '\f096'; }
-
-        .taskCheckbox:checked:before {
-          content: '\f14a';
-          color: #16a085;
-        }
-
-        /* custom select menu */
-
-        .taskCategory {
-          -webkit-appearance: none;
-          appearance: none;
-          cursor: pointer;
-          padding-left: 16.5px; /*specific positioning due to difficult behavior of select element*/
-          background: #fff;
-        }
-
-        .selectArrow {
-          position: absolute;
-          z-index: 10;
-          top: 35%;
-          right: 0;
-          margin-right: 20px;
-          color: #777;
-          pointer-events: none;
-        }
-
-        .taskCategory option {
-          background: #fff;
-          border: none;
-          outline: none;
-          padding: 0 100px;
-        }
-    </style> -->
 </head>
 
 <body>
@@ -319,44 +42,201 @@
         </nav>
     </header>
     <div id="main_content">
-<!--         <div class="container">
- --><!--             <h2 align="center">Todo List</h2>
- --><!--          <div ng-app="TaskManager">
-              <div class="container">
-                <div class="content" ng-controller="taskController">
-                    <h1>To-do List App</h1>
-                    <p class="tagline">an angularJS todo app</p>
-                    <form>
-                        <div class="inputContainer">
-                            <input type="text" id="description" class="taskName" placeholder="What do you need to do?" ng-model="newTask">
-                            <label for="description">Description</label>
-                        </div>
-                        <div class="inputContainer half last"> <i class="fa fa-caret-down selectArrow"></i>
-                            <select id="category" class="taskCategory" ng-model="newTaskCategory" ng-options="obj.name for obj in categories">
-                                <option class="disabled" value="">Choose a category</option>
-                            </select>
-                            <label for="category">Category</label>
-                        </div>
-                        <div class="inputContainer half last right">
-                            <input type="date" id="dueDate" class="taskDate" ng-model="newTaskDate">
-                            <label for="dueDate">Due Date</label>
-                        </div>
-                        <div class="row">
-                            <button class="taskAdd" ng-click="addNew()"><i class="fa fa-plus icon"></i>Add task</button>
-                            <button class="taskDelete" ng-click="deleteTask()"><i class="fa fa-trash-o icon"></i>Delete Tasks</button>
-                        </div>
-                    </form>
-                    <ul class="taskList">
-                        <li class="taskItem" ng-repeat="taskItem in taskItem track by $index" ng-model="taskItem">
-                            <input type="checkbox" class="taskCheckbox" ng-model="taskItem.complete" ng-change="save()">
-                            <span class="complete-{{taskItem.complete}}">{{taskItem.description}}</span> <span class="category-{{taskItem.category}}">{{taskItem.category}}</span> <strong class="taskDate complete-{{taskItem.complete}}"><i class="fa fa-calendar"></i>{{taskItem.date | date : 'mediumDate'}}</strong> </li>
-                    </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="box box-aqua">
+              <div class="box-header ui-sortable-handle" style="cursor: move;">
+                <i class="ion ion-clipboard"></i>
+                <h2 align="center">Todo List</h2>
+              </div>
+              <div class="box-body form-bg">
+                <div id="searchDiv">
+                  <div class="well">
+                    <label>
+                        <input type="checkbox" id="searchIsDone" name="searchIsDone"> Is Done
+                    </label>
+                    <button class="btn btn-primary pull-right" onclick="searchTodoTaskServices.searchTasksIsDone();"><span class="glyphicon glyphicon-search"></span> Search </button>
+                  </div>
+                  <div class="well">
+                    <label>
+                      <input type="checkbox" id="searchIsPending" name="searchIsPending"> Is Pending
+                    </label>
+                    <button class="btn btn-primary pull-right" onclick="searchTodoTaskServices.searchTasksIsPending();"><span class="glyphicon glyphicon-search"></span> Search </button>
+                  </div>
+                  <div class="well">
+                    <label for="editDueDate">Due Date Range: </label><br>
+                    From<br>
+                    <input type="date" id="fromDate" value="" name="fromDate"> <br>
+                    To<br>
+                    <input type="date" id="toDate" value="" name="toDate">
+                    <button class="btn btn-primary pull-right" onclick="searchTodoTaskServices.searchTasksDuedateWise();"><span class="glyphicon glyphicon-search"></span> Search </button>
+                  </div>
+                  <div class="well">
+                    <label for="taskDesc">Category</label>
+                    <button class="btn btn-primary pull-right" onclick="searchTodoTaskServices.searchTasksCategoryWise();"><span class="glyphicon glyphicon-search"></span> Search </button>
+                    <div id="group">
+                        <input type="checkbox" value="Food" name="searchCategory"> Food
+                        <input type="checkbox" value="Health" name="searchCategory"> Health
+                        <input type="checkbox" value="Study" name="searchCategory"> Study
+                        <input type="checkbox" value="Other" name="searchCategory"> Other
+                    </div>
+                  </div>
                 </div>
-            </div> -->
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-4">
+                    <h3>Click to open the related form</h3><br>
+                    <div class="mycontent-left">
+                      <ul>
+                        <li><button class="btn btn-danger" onclick="deleteTodoTaskServices.TodoTaskBulkDelete();"><i class="fa fa-close"></i> Bulk Delete</button></li><br>
+                        <li><button class="btn btn-primary " onclick="addTodoTaskServices.addTodoTask();"><i class="fa fa-plus"></i> Add Task</button></li><br>
+                        <li><button class="btn btn-primary" onclick="mainServices.displayToDoTask(mainServices.getAllTasks(mainServices.getActiveUser()));"><i class="fa fa-th-list"></i> Display All Tasks</button></li><br>
+                        <li><button class="btn btn-primary" onclick="sortTodoTaskServices.sortTaskAscOrder();"><i class="fa fa-sort-up"></i> Sort Task Ascending </button></li><br>
+                        <li><button class="btn btn-primary" onclick="sortTodoTaskServices.sortTaskDescOrder();"><i class="fa fa-sort-down"></i> Sort Task Descending </button></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="mycontent-right">
+                      <form id="addTaskForm" method="post" hidden="hidden" class="form-bg">
+                        <h1>Add Task</h1>
+                        <div class="form-group">
+                          <label for="taskDesc">Task</label>
+                          <input type="text" class="form-control" id="taskDesc" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="taskDesc">Category</label>
+                          <div id="group">
+                            <input type="checkbox" value="Food" name="category" onclick="mainServices.category(this,'category')"> Food
+                            <input type="checkbox" value="Health" name="category" onclick="mainServices.category(this,'category')"> Health
+                            <input type="checkbox" value="Study" name="category" onclick="mainServices.category(this,'category')"> Study
+                            <input type="checkbox" value="Other" name="category" onclick="mainServices.category(this,'category')"> Other
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="dueDate">Due Date</label>
+                          <input type="date" id="dueDate" name="dueDate">
+                        </div>
+                        <div class="form-group">
+                          <label>
+                            <input type="checkbox" id="isReminder" name="reminder" onclick="mainServices.TodoReminder('reminderDateDiv','reminderDate',this)"> Is Reminder
+                          </label>
+                        </div>
+                        <div class="form-group" id="reminderDateDiv" hidden="hidden">
+                          <label for="reminderDate">Reminder Date</label>
+                          <input type="date" id="reminderDate" name="reminderDate">
+                        </div>
+                        <div class="form-group">
+                          <label>
+                            <input type="radio" id="isPublic" name="public"> Is Public
+                          </label>
+                        </div>
+                        <br>
+                        <br>
+                        <div aria-label="group button">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" onclick="mainServices.closeForm('addTaskForm');" role="button" style="width: 136px;">Close</button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="submit" class="btn btn-primary btn-hover-green" style="width: 136px;" data-action="save" role="button">Save</button>
+                            </div>
+                        </div>
+                      </form>
+                      <form id="editTaskForm" method="post" hidden="hidden" class="form-bg">
+                          <input type="hidden" class="form-control" id="taskIndex">
+                          <h1>Edit Task</h1>
+                          <div class="form-group">
+                              <label for="editTaskDesc">Task</label>
+                              <input type="text" class="form-control" id="editTaskDesc" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="taskDesc">Category</label>
+                              <div id="group">
+                                  <input type="checkbox" id="Food" value="Food" name="editCategory" onclick="mainServices.category(this,'editCategory')"> Food
+                                  <br>
+                                  <input type="checkbox" id="Health" value="Health" name="editCategory" onclick="mainServices.category(this,'editCategory')"> Health
+                                  <br>
+                                  <input type="checkbox" id="Study" value="Study" name="editCategory" onclick="mainServices.category(this,'editCategory')"> Study
+                                  <br>
+                                  <input type="checkbox" id="Other" value="Other" name="editCategory" onclick="mainServices.category(this,'editCategory')"> Other
+                                  <br>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="editDueDate">Due Date</label>
+                              <input type="date" id="editDueDate" value="" name="editDueDate">
+                          </div>
+                          <div class="form-group">
+                              <label>
+                                  <input type="checkbox" id="editIsReminder" name="reminder" onclick="mainServices.TodoReminder('editReminderDateDiv','editReminderDate',this)"> Is Reminder
+                              </label>
+                          </div>
+                          <div class="form-group" id="editReminderDateDiv" hidden="hidden">
+                              <label for="reminderDate">Reminder Date</label>
+                              <input type="date" id="editReminderDate" value="" name="reminderDate">
+                          </div>
+                          <div class="form-group">
+                              <label>
+                                  <input type="radio" id="editIspublic" name="public"> Is Public
+                              </label>
+                          </div>
+                          <div class="form-group">
+                              <label>
+                                  <input type="checkbox" id="editIsDone" name="done"> Is Done
+                              </label>
+                          </div>
+                          <br>
+                          <br>
+                          <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                              <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-primary" style="width: 136px;"onclick="mainServices.closeForm('editTaskForm');" role="button">Close</button>
+                              </div>
+                              <div class="btn-group" role="group">
+                                  <button type="submit" class="btn btn-primary btn-hover-green" style="width: 136px;" data-action="save" role="button">Save</button>
+                              </div>
+                          </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="jumbotron">
+                <h3>All results are displayed below:</h3><br>
+                <div class="well">
+                  <ul class="todo-list ui-sortable" id="toDoList">
+                    <li>
+                      <span class="handle ui-sortable-handle">
+                        <a href=""><i class="fa fa-ellipsis-v"></i></a>
+                        <i class="fa fa-ellipsis-v"></i>
+                      </span>
+                      <input type="checkbox" value="" name="">
+                    </li>
+                    <li>
+                      <div class="tools">
+                        <button><span class="glyphicon glyphicon-trash pull-right"></span></button>
+                        <button><span class="glyphicon glyphicon-trash pull-right"></span></button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-<!--     <script src="../js/localStorage.js"></script>
+    <script src="../js/localStorage.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/addTodoTask.js"></script>
+    <script src="../js/editTodoTask.js"></script>
+    <script src="../js/deleteTodoTask.js"></script>
+    <script src="../js/sortTodoTask.js"></script>
+    <script src="../js/searchTodoTask.js"></script>
+    <br><br>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -368,7 +248,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
 </body>
 
 </html>

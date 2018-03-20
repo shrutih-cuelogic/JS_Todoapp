@@ -21,8 +21,33 @@ header .navbar{
 #main_content {
   margin-top: 60px;
 }
-.navbar-nav .firstlastnameNav {
+.firstlastnameNav {
   text-transform: capitalize;
 }
 /* super basic grid structure */
 
+.mycontent-left {
+    border-right: 3px solid #333;
+    margin-right: 85px;
+}
+#searchDiv {
+  height: 435px;
+}
+#searchDiv .well {
+    color: black;
+    text-transform: capitalize;
+    width: 380px;
+}
+.mycontent-right{
+  margin-top: 70px;
+  margin-right: 15px;
+}
+.todo-list li {
+  background-color: rgba(158, 158, 158, 0.59);
+  border: 1px solid;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.tools {
+  padding-left: 11px;
+}
